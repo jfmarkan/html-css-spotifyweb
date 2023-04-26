@@ -156,7 +156,8 @@ hr{
     background-color: #080b12;
     height: 90px;
     text-align: right;
-    padding: 1rem;
+    padding: 2rem;
+    justify-content: end;
 }
 
 button{
@@ -164,9 +165,13 @@ button{
     background-color: #080b12;
     color: #ffffff;
     border-radius: 20px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: .8rem;
     padding: .5rem 2rem;
+}
+
+button:hover{
+    scale: 1.1;
 }
 
 p{
@@ -177,14 +182,27 @@ p{
     justify-content: center;
 }
 
+.highlight{
+    width: 30px;
+    height: 2px;
+    background-color: #bcff33;
+}
+
 .activity-menu ul{
-    justify-content: center;
+    margin-top: 1rem;
+    align-items: baseline;
 }
 
 .activity-menu li{
     font-size: .8rem;
     font-weight: 700;
-    margin: .5rem .75rem;
+    margin: 0 .75rem;
+    padding: 0;
+    height: 20px;
+}
+
+.activity-menu li:hover{
+    color: #ffffff;
 }
 
 .activity-main{
@@ -251,20 +269,30 @@ footer{
     padding: .5rem
 }
 
+.playing-now{
+    width: calc(100vw / 9);
+}
+
 .playing-art{
-    width: 220px;
-    justify-content: space-between;
+    width: 80%;
+    justify-content: start;
     align-items: center;
 }
 
-.img-art img{
+.playing-art img{
     width: 42px;
     margin-right: .5rem;
 }
 
-.song-artist{
+.playing-data{
     width: 50%;
     justify-content: center;
+}
+
+.playing-actions{
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .song-title,
@@ -284,12 +312,14 @@ footer{
 }
 
 .player{
-    width: 37%;
+    width: calc((100vw / 9) * 3);
 }
 
 .player-top{
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 1;
 }
 
 .player-top i{
@@ -305,6 +335,7 @@ footer{
 .player-bottom{
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 3;
 }
 
 .timebar{
@@ -324,8 +355,23 @@ footer{
 }
 
 .selector{
-
+    transform: translate(-50%, -50%);
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    background-color: #c1c1c1;
+    left: 15%;
+    top: 50%;
+    border-radius: 50%;
+    display: none;
 }
+
+.current-time:hover{
+    background-color: #bcff33;
+    display: block;
+}
+
+
 
 .play-time{
     font-size: .8rem;
@@ -360,6 +406,10 @@ footer{
     border-radius: 2px;
 }
 
+.current-volume:hover{
+    background-color: #bcff33;
+}
+
 @media screen and (max-width: 992px){
     .disc{
         width: calc((100% / 4) - 1rem);
@@ -379,6 +429,26 @@ footer{
         width: calc((100% / 2) - 1rem);
         max-width: 180px;
         text-align: center;
+    }
+
+    .playing-now{
+        width: calc((100vw / 9)*3);
+    }
+
+    .playing-art{
+        width: 60%;
+    }
+
+    .playing-actions{
+        flex-direction: column;
+    }
+
+    .player{
+        width: 30%;
+    }
+
+    .timebar{
+        width: 50%;
     }
 }
 
@@ -426,7 +496,17 @@ footer{
         height: 28px;
     }
 
+    footer{
+        flex-wrap: nowrap;
+    }
 
+    .controls{
+        width: 180px;
+    }
+
+    .controls i{
+        margin-right: .5rem;
+    }
 }
 
 @media screen and (max-height: 750px){
