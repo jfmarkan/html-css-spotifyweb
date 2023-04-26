@@ -8,6 +8,16 @@
 
 /* STYLES */
 
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: #6e6e6e;
+}
+
+h4{
+    color: #ffffff;
+    margin: 1.5rem 2rem .5rem;
+}
+
 /* .colors{
     color highlight: #bcff33;
     color sidebar: #000000;
@@ -16,18 +26,106 @@
     color footer: #282828;
 } */
 
-.flex{
+.flex-col{
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
-main{
-    height: calc(100vh - 90px);
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
 }
+
 
 nav{
     width: 230px;
     height: 100%;
     background-color: #000000;
+}
+
+ul li{
+    list-style: none;
+    height: 35px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+ul li img{
+    width: 22px;
+    margin-left: 2rem;
+    margin-right: .5rem;
+    filter: invert(.3);
+}
+
+.selected{
+    border-left: 3px solid #bcff33;
+    color: #ffffff;
+}
+
+.add-playlist{
+    width: 35px;
+    height: 35px;
+    background-color: #a3a3a3;
+    color: #000000;
+    margin-left: 2rem;
+    margin-right: .5rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.playlist{
+    margin-left: 2rem;
+}
+
+.install-app{
+    font-size: .8rem;
+    font-weight: 700;
+    margin: .75rem 1.25rem;
+}
+
+.install-app img{
+    width: 15px;
+    margin-right: .5rem;
+    filter: invert(.3);
+}
+
+hr{
+    width: calc(100% - 2.5rem);
+    margin: 0 auto;
+}
+
+.user-profile{
+    align-items: center;
+    color: #ffffff;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+
+.user-profile img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #808080;
+    margin: 1rem .5rem .5rem 1.25rem;
+}
+
+
+
+
+
+
+
+
+
+
+main{
+    height: calc(100vh - 90px);
 }
 
 .activity{
@@ -39,4 +137,14 @@ nav{
 footer{
     height: 90px;
     background-color: #282828;
+}
+
+.big-logo{
+    height: 40px;
+    margin: 1.25rem;
+}
+
+.small-logo{
+    width: 28px;
+    display: none;
 }
