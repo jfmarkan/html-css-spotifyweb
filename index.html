@@ -10,14 +10,38 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
         <main class="flex-row">
             <nav class="flex-col">
-                <div class="menu-app">
-                    <img class="big-logo" src="img/logo.svg" alt="Spotify Logo">
-                    <img class="small-logo" src="img/logo-small.svg" alt="Spotify Logo">
+                <div class="menu-mobile flex-col">
                     <div class="app-menu">
+                        <img class="small-logo" src="img/logo-small.svg" alt="Spotify Logo">
+                        <ul>
+                            <li>
+                                <img src="img/home.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="img/search.svg" alt="">
+                            </li>
+                            <li>
+                                <img src="img/libreria.svg" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user-app">
+                        <div class="install-app flex-row">
+                            <img src="img/download.svg" alt="">
+                        </div>
+                        <div class="user-profile flex-row">
+                            <img src="img/profile.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-desktop">
+                    <div class="app-menu">
+                        <img class="big-logo" src="img/logo.svg" alt="Spotify Logo">
                         <ul>
                             <li class="selected">
                                 <img src="img/home.svg" alt="">
@@ -52,37 +76,135 @@
                 </div>
                 <div class="user-app">
                     <div class="install-app flex-row">
-                            <img src="img/download.svg" alt="">
-                            Installa app</li>
+                        <img src="img/download.svg" alt="">
+                        Installa app
                     </div>
                     <hr>
                     <div class="user-profile flex-row">
-                            <div>
-                                <img src="img/profile.svg" alt="">
-                            </div>
-                            <span>John Doe</span>
+                        <img src="img/profile.svg" alt="">
+                        <span>John Doe</span>
                     </div>
                 </div>
             </nav>
             <div class="activity">
                 <div class="activity-top">
-                    
+                    <button>EFFETTUA L'UPGRADE</button>
                 </div>
                 <div class="activity-main">
-
+                    <div class="activity-menu">
+                        <ul class="flex-row">
+                            <li>IN EVIDENZA</li>
+                            <li>PODCAST</li>
+                            <li>CLASSIFICHE</li>
+                            <li>GENERI E MOOD</li>
+                            <li>NUOVE USCITE</li>
+                            <li>SCOPRI</li>
+                        </ul>
+                    </div>
+                    <div class="recently-played">
+                        <h2>Recently Played</h2>
+                        <div class="recent-discs flex-row">
+                            <div class="disc">
+                                <img src="img/metal_lifting.jpg" alt="">
+                                <h4>Heavy Metal</h4>
+                                <p>Subtitle</p>
+                            </div>
+                            <div class="disc">
+                                <img src="img/stranger.jpeg" alt="">
+                                <h4>Stranger Things, Vol. 1(a Netflix Original Series Soundtrack)</h4>
+                                <p>Kyle Dixon & Michael Stein</p>
+                            </div>
+                            <div class="disc">
+                                <img src="img/aquietplace.jpeg" alt="">
+                                <h4>A quiet place</h4>
+                                <p>Subtitle</p>
+                            </div>
+                            <div class="disc">
+                                <img src="img/split.jpeg" alt="">
+                                <h4>Split</h4>
+                                <p>Subtitle</p>
+                            </div>
+                            <div class="disc">
+                                <img src="img/cure.jpeg" alt="">
+                                <h4>A cure for wellness</h4>
+                                <p>Subtitle</p>
+                            </div>
+                            <div class="disc">
+                                <img src="img/sinister.jpeg" alt="">
+                                <h4>Sinister</h4>
+                                <p>Subtitle</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="created-for-you">
+                        <h2>Creato per John Doe</h2>
+                        <p>Più ascolti, più accurati saranno i suggerimenti</p>
+                        <div class="for-you flex-row">
+                            <div class="disc">
+                                <img src="img/radar.jpeg" alt="">
+                                <h4>Release Radar</h4>
+                            </div>
+                            <div class="disc">
+                                <img src="img/mixdaily.jpeg" alt="">
+                                <h4>Daily Mix 1</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-artists">
+                        <h2>Artisti più popolati</h2>
+                        <p>Più ascolti, più accurati saranno i suggerimenti</p>
+                        <div class="popular flex-row">
+                            <div class="disc">
+                                <img src="img/youg.jpeg" alt="">
+                                <h4>Lana del Rey</h4>
+                            </div>
+                            <div class="disc">
+                                <img src="img/einaudi.jpeg" alt="">
+                                <h4>Ludovico Einaudi</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
-        <footer>
-            <div class="playing-art">
-                <div class="img-art"></div>
-                div
+        <footer class="flex-row">
+            <div class="playing-art flex-row">
+                <div class="img-art flex-row">
+                    <img src="img/sinister.jpeg" alt="Sinister">
+                    <div class="song-artist">
+                        <span class="song-title">Sinister</span>
+                        <br>
+                        <span class="artist-name">Brano Nome</span>
+                    </div>
+                </div>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-folder"></i>
             </div>
             <div class="player">
-
+                <div class="player-top flex-row">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-regular fa-circle-play"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-rotate-right"></i>
+                </div>
+                <div class="player-bottom flex-row">
+                    <div class="play-time now">0:25</div>
+                    <div class="timebar">
+                        <div class="current-time"></div>
+                        <div class="selector"></div>
+                    </div>
+                    <div class="play-time end">4:35</div>
+                </div>
             </div>
-            <div class="controls">
-
+            <div class="controls flex-row">
+                <i class="fa-solid fa-list"></i>
+                <i class="fa-solid fa-display"></i>
+                <i class="fa-solid fa-volume-high"></i>
+                <div class="volume-bar flex-row">
+                    <div class="current-volume"></div>
+                    <div class="selector"></div>
+                </div>
             </div>
         </footer>
     </body>

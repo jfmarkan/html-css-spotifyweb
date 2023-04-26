@@ -13,9 +13,18 @@ body{
     color: #6e6e6e;
 }
 
+main{
+    height: calc(100vh - 90px);
+}
+
+h2{
+    color: #ffffff;
+    margin-top: 2rem;
+}
+
 h4{
     color: #ffffff;
-    margin: 1.5rem 2rem .5rem;
+    margin: 1.5rem 1.25rem .5rem;
 }
 
 /* .colors{
@@ -40,11 +49,21 @@ h4{
     
 }
 
-
+/*NAV*/
 nav{
     width: 230px;
     height: 100%;
     background-color: #000000;
+}
+
+.big-logo{
+    height: 40px;
+    margin: 1.25rem;
+}
+
+.small-logo{
+    width: 28px;
+    margin: 1rem 1.25rem .5rem;
 }
 
 ul li{
@@ -57,7 +76,7 @@ ul li{
 
 ul li img{
     width: 22px;
-    margin-left: 2rem;
+    margin-left: 1.25rem;
     margin-right: .5rem;
     filter: invert(.3);
 }
@@ -72,14 +91,14 @@ ul li img{
     height: 35px;
     background-color: #a3a3a3;
     color: #000000;
-    margin-left: 2rem;
+    margin-left: 1.25rem;
     margin-right: .5rem;
     font-size: 1.8rem;
     text-align: center;
 }
 
 .playlist{
-    margin-left: 2rem;
+    margin-left: 1.25rem;
 }
 
 .install-app{
@@ -115,36 +134,217 @@ hr{
     margin: 1rem .5rem .5rem 1.25rem;
 }
 
-
-
-
-
-
-
-
-
-
-main{
-    height: calc(100vh - 90px);
+.menu-mobile{
+    display: none;
 }
+
+
+/*MAIN*/
 
 .activity{
     width: calc(100% - 230px);
     height: 100%;
     background-color: #141922;
+    overflow-y: scroll;
 }
+
+.activity-top{
+    background-color: #080b12;
+    height: 90px;
+    text-align: right;
+    padding: 1rem;
+}
+
+button{
+    border: 1px solid #ffffff;
+    background-color: #080b12;
+    color: #ffffff;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: .8rem;
+    padding: .5rem 2rem;
+}
+
+.recently-played,
+.created-for-you,
+.popular-artists{
+    width: 98%;
+    margin: 0 auto;
+}
+
+.recent-discs{
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+.disc{
+    width: calc((100% / 6) - 1rem);
+    max-width: 180px;
+    text-align: center;
+}
+
+.disc img{
+    width: 100%;
+    position: relative;
+}
+
+.disc:hover{
+    filter: grayscale(.8);
+}
+
+.for-you,
+.popular{
+    gap: 1rem
+}
+
+.popular img{
+    border-radius: 50%;
+}
+/*FOOTER*/
 
 footer{
     height: 90px;
     background-color: #282828;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem
 }
 
-.big-logo{
-    height: 40px;
-    margin: 1.25rem;
+.playing-art{
+    width: 220px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.small-logo{
-    width: 28px;
-    display: none;
+.img-art img{
+    width: 42px;
+    margin-right: .5rem;
+}
+
+.song-artist{
+    width: 110px;
+}
+
+.song-title{
+    font-size: .8rem;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.artist-name{
+    font-size: .7rem;
+    font-weight: 800;
+}
+
+.player{
+    width: 37%;
+}
+
+.player-top{
+    justify-content: center;
+    align-items: center;
+}
+
+.player-top i{
+    font-size: 1rem;
+    color: #ffffff;
+    margin: .75rem;
+}
+
+.player-top i.fa-circle-play{
+    font-size: 1.5rem;
+}
+
+.player-bottom{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timebar{
+    width: 80%;
+    height: 5px;
+    background-color: #5a5a5a;
+    border-radius: 2px;
+    position: relative;
+}
+
+.current-time{
+    position: absolute;
+    width: 15%;
+    height: 5px;
+    background-color: #c1c1c1;
+    border-radius: 2px;
+}
+
+.selector{
+
+}
+
+.play-time{
+    font-size: .8rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.controls{
+    width: 220px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.controls i{
+    margin-right: .75rem;
+    color: #ffffff;
+}
+
+.volume-bar{
+    width: 50%;
+    height: 5px;
+    background-color: #5a5a5a;
+    border-radius: 2px;
+    position: relative;
+}
+
+.current-volume{
+    position: absolute;
+    width: 20%;
+    height: 5px;
+    background-color: #c1c1c1;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 992px){
+    .disc{
+        width: calc((100% / 4) - 1rem);
+        max-width: 180px;
+        text-align: center;
+    }
+
+    .recent-discs{
+        margin-top: 1rem;
+        justify-content: start;
+        gap:1rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .disc{
+        width: calc((100% / 2) - 1rem);
+        max-width: 180px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .menu-desktop{
+        display: none;
+    }
+
+    .menu-mobile{
+        display: flex;
+    }
+
+    nav{
+        width: 50px;
+    }
 }
