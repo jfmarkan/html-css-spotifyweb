@@ -15,74 +15,78 @@
     <body>
         <main class="flex-row">
             <nav class="flex-col">
-                <div class="menu-mobile flex-col">
+                <div class="menu-desktop flex-col">
                     <div class="app-menu">
-                        <img class="small-logo" src="img/logo-small.svg" alt="Spotify Logo">
-                        <ul>
-                            <li>
-                                <img src="img/home.svg" alt="">
-                            </li>
-                            <li>
-                                <img src="img/search.svg" alt="">
-                            </li>
-                            <li>
-                                <img src="img/libreria.svg" alt="">
-                            </li>
-                        </ul>
+                        <div>
+                            <img class="big-logo" src="img/logo.svg" alt="Spotify Logo">
+                            <ul>
+                                <li class="selected">
+                                    <img src="img/home.svg" alt="">
+                                    Home
+                                </li>
+                                <li>
+                                    <img src="img/search.svg" alt="">
+                                    Cerca
+                                </li>
+                                <li>
+                                    <img src="img/libreria.svg" alt="">
+                                    La tua libreria
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="playlist-menu">
+                            <h4>PLAYLIST</h4>
+                            <ul>
+                                <li>
+                                    <div class="add-playlist">+</div>
+                                    Crea Playlist
+                                </li>
+                                <li class="playlist">Nome Playlist</li>
+                                <li class="playlist">Nome Playlist</li>
+                                <li class="playlist">Nome Playlist</li>
+                                <li class="playlist">Nome Playlist</li>
+                                <li class="playlist">Nome Playlist</li>
+                                <li class="playlist">Nome Playlist</li>
+                                <li class="playlist">Nome Playlist</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="user-app">
                         <div class="install-app flex-row">
                             <img src="img/download.svg" alt="">
+                            Installa app
                         </div>
+                        <hr>
                         <div class="user-profile flex-row">
                             <img src="img/profile.svg" alt="">
+                            <span>John Doe</span>
                         </div>
                     </div>
                 </div>
-                <div class="menu-desktop">
+                <div class="menu-mobile flex-col">
                     <div class="app-menu">
-                        <img class="big-logo" src="img/logo.svg" alt="Spotify Logo">
-                        <ul>
-                            <li class="selected">
-                                <img src="img/home.svg" alt="">
-                                Home
-                            </li>
-                            <li>
-                                <img src="img/search.svg" alt="">
-                                Cerca
-                            </li>
-                            <li>
-                                <img src="img/libreria.svg" alt="">
-                                La tua libreria
-                            </li>
-                        </ul>
+                        <div>
+                            <img class="small-logo" src="img/logo-small.svg" alt="Spotify Logo">
+                            <ul>
+                                <li>
+                                    <img src="img/home.svg" alt="">
+                                </li>
+                                <li>
+                                    <img src="img/search.svg" alt="">
+                                </li>
+                                <li>
+                                    <img src="img/libreria.svg" alt="">
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="playlist-menu">
-                        <h4>PLAYLIST</h4>
-                        <ul>
-                            <li>
-                                <div class="add-playlist">+</div>
-                                Crea Playlist
-                            </li>
-                            <li class="playlist">Nome Playlist</li>
-                            <li class="playlist">Nome Playlist</li>
-                            <li class="playlist">Nome Playlist</li>
-                            <li class="playlist">Nome Playlist</li>
-                            <li class="playlist">Nome Playlist</li>
-                            <li class="playlist">Nome Playlist</li>
-                            <li class="playlist">Nome Playlist</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="user-app">
-                    <div class="install-app flex-row">
-                        <img src="img/download.svg" alt="">
-                        Installa app
-                    </div>
-                    <hr>
-                    <div class="user-profile flex-row">
-                        <img src="img/profile.svg" alt="">
-                        <span>John Doe</span>
+                    <div class="user-app">
+                        <div class="install-app flex-col">
+                            <img src="img/download.svg" alt="">
+                        </div>
+                        <div class="user-profile flex-col">
+                            <img src="img/profile.svg" alt="">
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -91,9 +95,9 @@
                     <button>EFFETTUA L'UPGRADE</button>
                 </div>
                 <div class="activity-main">
-                    <div class="activity-menu">
+                    <div class="activity-menu flex-row">
                         <ul class="flex-row">
-                            <li>IN EVIDENZA</li>
+                            <li class="active">IN EVIDENZA</li>
                             <li>PODCAST</li>
                             <li>CLASSIFICHE</li>
                             <li>GENERI E MOOD</li>
@@ -105,32 +109,50 @@
                         <h2>Recently Played</h2>
                         <div class="recent-discs flex-row">
                             <div class="disc">
-                                <img src="img/metal_lifting.jpg" alt="">
+                                <div class="img-disc">
+                                    <img src="img/metal_lifting.jpg" alt="">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                                 <h4>Heavy Metal</h4>
                                 <p>Subtitle</p>
                             </div>
                             <div class="disc">
-                                <img src="img/stranger.jpeg" alt="">
+                                <div class="img-disc">
+                                    <img src="img/stranger.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                                 <h4>Stranger Things, Vol. 1(a Netflix Original Series Soundtrack)</h4>
                                 <p>Kyle Dixon & Michael Stein</p>
                             </div>
                             <div class="disc">
-                                <img src="img/aquietplace.jpeg" alt="">
+                                <div class="img-disc">
+                                    <img src="img/aquietplace.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                                 <h4>A quiet place</h4>
                                 <p>Subtitle</p>
                             </div>
                             <div class="disc">
-                                <img src="img/split.jpeg" alt="">
+                                <div class="img-disc">
+                                    <img src="img/split.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                                 <h4>Split</h4>
                                 <p>Subtitle</p>
                             </div>
                             <div class="disc">
-                                <img src="img/cure.jpeg" alt="">
+                                <div class="img-disc">
+                                    <img src="img/cure.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                                 <h4>A cure for wellness</h4>
                                 <p>Subtitle</p>
                             </div>
                             <div class="disc">
-                                <img src="img/sinister.jpeg" alt="">
+                                <div class="img-disc">
+                                    <img src="img/sinister.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                                 <h4>Sinister</h4>
                                 <p>Subtitle</p>
                             </div>
@@ -141,11 +163,17 @@
                         <p>Più ascolti, più accurati saranno i suggerimenti</p>
                         <div class="for-you flex-row">
                             <div class="disc">
-                                <img src="img/radar.jpeg" alt="">
+                                <div class="img-disc">
+                                    <img src="img/radar.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                                 <h4>Release Radar</h4>
                             </div>
                             <div class="disc">
-                                <img src="img/mixdaily.jpeg" alt="">
+                                <div class="img-disc">
+                                    <img src="img/mixdaily.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                                 <h4>Daily Mix 1</h4>
                             </div>
                         </div>
@@ -155,11 +183,17 @@
                         <p>Più ascolti, più accurati saranno i suggerimenti</p>
                         <div class="popular flex-row">
                             <div class="disc">
-                                <img src="img/youg.jpeg" alt="">
+                                <div class="img-disc">
+                                    <img src="img/youg.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                                 <h4>Lana del Rey</h4>
                             </div>
                             <div class="disc">
-                                <img src="img/einaudi.jpeg" alt="">
+                                <div class="img-disc">
+                                    <img src="img/einaudi.jpeg" alt="">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                                 <h4>Ludovico Einaudi</h4>
                             </div>
                         </div>
@@ -171,10 +205,9 @@
             <div class="playing-art flex-row">
                 <div class="img-art flex-row">
                     <img src="img/sinister.jpeg" alt="Sinister">
-                    <div class="song-artist">
-                        <span class="song-title">Sinister</span>
-                        <br>
-                        <span class="artist-name">Brano Nome</span>
+                    <div class="song-artist flex-col">
+                        <p class="song-title">Sinister</p>
+                        <p class="artist-name">Brano Nome</p>
                     </div>
                 </div>
                 <i class="fa-regular fa-heart"></i>
