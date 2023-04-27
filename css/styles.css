@@ -90,6 +90,20 @@ ul li img{
     color: #ffffff;
 }
 
+.not-selected{
+    border-left: 3px solid #000000;
+}
+
+li.selected:hover{
+    color: #ffffff;
+    cursor: pointer;
+}
+
+li.not-selected:hover{
+    color: #ffffff;
+    cursor: pointer;
+}
+
 .add-playlist{
     width: 35px;
     height: 35px;
@@ -105,6 +119,24 @@ ul li img{
     margin-left: 1.25rem;
 }
 
+.playlist:hover{
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.add-playlist:hover{
+    background-color: #ffffff;
+}
+
+.create-playlist:hover{
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.create-playlist:hover .add-playlist{
+    background-color: #ffffff;
+}
+
 .install-app{
     font-size: .8rem;
     font-weight: 700;
@@ -115,6 +147,11 @@ ul li img{
     width: 15px;
     margin-right: .5rem;
     filter: invert(.3);
+}
+
+.install-app:hover{
+    color: #ffffff;
+    cursor: pointer;
 }
 
 hr{
@@ -129,7 +166,6 @@ hr{
     font-weight: 600;
 }
 
-
 .user-profile img{
     width: 25px;
     height: 25px;
@@ -141,7 +177,6 @@ hr{
 .menu-mobile{
     display: none;
 }
-
 
 /*MAIN*/
 
@@ -158,6 +193,13 @@ hr{
     text-align: right;
     padding: 2rem;
     justify-content: end;
+    position: fixed;
+    width: calc(100% - 230px);
+    z-index: 2;
+}
+
+.activity-main{
+    padding-top: 90px
 }
 
 button{
@@ -178,7 +220,7 @@ p{
     margin-bottom: .75rem;
 }
 
-.activity-menu{
+.activity-menu ul{
     justify-content: center;
 }
 
@@ -217,7 +259,6 @@ p{
 
 .disc{
     width: calc((100% / 6) - 1rem);
-    max-width: 180px;
     text-align: center;
 }
 
@@ -311,6 +352,11 @@ footer{
     font-weight: 800;
 }
 
+.playing-actions i:hover{
+    color: #ffffff;
+    cursor: pointer;
+}
+
 .player{
     width: calc((100vw / 9) * 3);
 }
@@ -330,6 +376,14 @@ footer{
 
 .player-top i.fa-circle-play{
     font-size: 1.5rem;
+}
+
+.player-top i:hover{
+    cursor: pointer;
+}
+
+.player-top i.fa-circle-play:hover{
+    scale: 1.2;
 }
 
 .player-bottom{
@@ -354,7 +408,7 @@ footer{
     border-radius: 2px;
 }
 
-.selector{
+.time-selector{
     transform: translate(-50%, -50%);
     height: 15px;
     width: 15px;
@@ -364,14 +418,16 @@ footer{
     top: 50%;
     border-radius: 50%;
     display: none;
+    cursor: pointer;
 }
 
-.current-time:hover{
+.timebar:hover .current-time{
     background-color: #bcff33;
-    display: block;
 }
 
-
+.timebar:hover .time-selector{
+    display:block;
+}
 
 .play-time{
     font-size: .8rem;
@@ -406,8 +462,25 @@ footer{
     border-radius: 2px;
 }
 
-.current-volume:hover{
+.volume-selector{
+    transform: translate(-50%, -50%);
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    background-color: #c1c1c1;
+    left: 15%;
+    top: 50%;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+}
+
+.volume-bar:hover .current-volume{
     background-color: #bcff33;
+}
+
+.volume-bar:hover .volume-selector{
+    display: block;
 }
 
 @media screen and (max-width: 992px){
@@ -480,6 +553,10 @@ footer{
     .activity{
         width: calc(100vw - 50px);
     }
+    .activity-top{
+        width: calc(100% - 50px);
+    }
+
 
     .activity-main{
         width: 97%;
