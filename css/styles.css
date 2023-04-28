@@ -225,7 +225,7 @@ p{
     margin-bottom: .75rem;
 }
 
-.activity-menu ul{
+.activity-menu{
     justify-content: center;
 }
 
@@ -238,6 +238,7 @@ p{
 .activity-menu ul{
     margin-top: 1rem;
     align-items: baseline;
+    justify-content: center;
 }
 
 .activity-menu li{
@@ -507,6 +508,10 @@ footer{
 }
 
 @media screen and (max-width: 992px){
+    .activity{
+        overflow: hidden;
+    }
+
     .disc{
         width: calc((100% / 4) - 1rem);
         max-width: 180px;
@@ -609,8 +614,17 @@ footer{
     }
 }
 
-@media screen and (max-height: 750px){
+@media screen and (max-height: 730px){
+    .install-app{
+        display: none;
+    }
+
     nav{
+        overflow: hidden;
+    }
+
+    nav .playlist-menu ul{
         overflow-y: scroll;
     }
+
 }
