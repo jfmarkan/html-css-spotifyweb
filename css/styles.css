@@ -579,7 +579,7 @@ footer{
     }
 
     .activity{
-        width: calc(100vw - 50px);
+        width: calc(100% - 50px);
     }
     .activity-top{
         width: calc(100% - 50px);
